@@ -1,0 +1,260 @@
+.voting {
+    &-wrapper {
+        position: relative;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 662px;
+        background-color: #FFFFFF;
+        border-radius: 20px;
+
+        &-bg {
+            background-color: #f0efef;
+        }
+
+        &-arrow {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FBE0DC;
+            border-radius: 10px;
+            position: absolute;
+            left: 10px;
+            cursor: pointer;
+        }
+
+        &-arrow:before {
+            content: url('../../../imgs/search-arrow.png');
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 11px;
+            height: 20px;
+        }
+
+        &-arrow:hover {
+            background: #FF868E;
+        }
+
+        &-arrow:hover:before {
+            content: url('../../../imgs/search-arrow-hover.png');
+        }
+
+        &-title {
+            margin-left: 60px;
+            margin-bottom: 20px;
+            display: inline-block;
+            padding: 6px 30px;
+            height: 40px;
+            background: #FF868E;
+            border-radius: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 2px;
+            color: #FFFFFF;
+        }
+
+        &-img {
+            width: 640px;
+            margin: 0 auto;
+            height: 360px;
+            img {
+                border-radius: 20px;
+                width: 640px;
+                height: 360px;
+                object-fit: cover;
+                z-index: 1;
+            }
+        }
+
+        &-icons {
+            margin-top: -42px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+
+            div {
+                width: 80px;
+                height: 80px;
+                border: 4px solid #FFFFFF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .icon-like {
+                background-color: #97EAB9;
+                border-right: none;
+                border-radius: 20px 0px 0px 20px;
+            }
+
+            .icon-like:hover {
+                background: rgb(201, 243, 218)
+            }
+
+            .icon-like:before {
+                content: url('../../../imgs/voting-like.png');
+                width: 30px;
+                height: 30px;
+            }
+
+            .icon-like:hover:before {
+                content: url('../../../imgs/voting-like-hover.png');
+                width: 30px;
+                height: 30px;
+            }
+
+            .icon-favourites {
+                background-color: #FF868E;
+                border-right: none;
+            }
+
+            .icon-favourites:hover {
+                background: rgb(252, 188, 192);
+            }
+
+            .icon-favourites:before {
+                content: url('../../../imgs/voting-fav.png');
+                width: 30px;
+                height: 30px;
+            }
+
+            .icon-favourites:hover:before {
+                content: url('../../../imgs/voting-fav-hover.png');
+                width: 30px;
+                height: 30px;
+            }
+            
+            .icon-favourites-active::before {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #FF868E;
+                content: url('../../../imgs/voting-fav-active.png');   
+            }
+
+            .icon-dislikes {
+                background-color: #FFD280;
+                border-radius: 0px 20px 20px 0px;
+            }
+
+            .icon-dislikes:hover {
+                background: rgb(255, 231, 186);
+            }
+
+            .icon-dislikes:before {
+                content: url('../../../imgs/voting-dislike.png');
+                width: 30px;
+                height: 30px;
+            }
+
+            .icon-dislikes:hover:before {
+                content: url('../../../imgs/voting-dislike-hover.png');
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &-info {
+            width: 640px;
+            height: 60px;
+            margin: 0px auto 10px auto;
+            display: flex;
+            align-items: center;
+            background: #F8F8F7;
+            border-radius: 10px;
+
+            p {
+                display: inline-block;
+            }
+
+            .info-time {
+                margin-left: 15px;
+                margin-right: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 61px;
+                height: 30px;
+                background-color: #FFFFFF;
+                border-radius: 5px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #1D1D1D;
+            }
+
+            .info-text {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+
+                & span {
+                    font-weight: 600;
+                }
+            }
+
+            .info-icon {
+                margin-left: auto;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+.fav-wrapper-info {
+    width: 642px;
+    height: 60px;
+    margin: 10px auto 0px auto;
+    display: flex;
+    align-items: center;
+    background: #F8F8F7;
+    border-radius: 10px;
+
+    p {
+        display: inline-block;
+    }
+
+    .info-time {
+        margin-left: 15px;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 61px;
+        height: 30px;
+        background-color: #FFFFFF;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #1D1D1D;
+    }
+
+    .info-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+
+        & span {
+            font-weight: 600;
+        }
+    }
+
+    .info-icon {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    &-noItems {
+        padding-left: 20px;
+    }
+}

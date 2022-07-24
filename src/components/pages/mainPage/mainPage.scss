@@ -1,0 +1,96 @@
+body {
+    background-color: #E5E5E5;
+}
+.sticky {
+    position: sticky;
+    top: 20px;
+}
+.home {
+    width: 1340px;
+    margin: 0 auto;
+    padding-top: 35px;
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &-right {
+        margin-left: 100px;
+        &-logo {
+            display: flex;
+            margin-bottom: 80px;
+            img {
+                margin-right: 8px;
+            }
+        }
+        h1 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 44px;
+            line-height: 58px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin-bottom: 60px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 29px;
+            color: #8C8C8C;
+        }
+        p {
+            margin-bottom: 20px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 29px;
+        }
+        &-inner {
+            display: flex;
+            div {
+                width: 138px;
+                margin-right: 16px;
+                a div:hover {
+                    background-color:#FBE0DC;
+                    color: #FF868E;
+                }
+                img {
+                    margin-bottom: 10px;
+                }
+                div {
+                    width: 138px;
+                    height: 36px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: #FFFFFF;
+                    border-radius: 10px;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 16px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    color: #FF868E;
+                }
+            }
+        }
+    }
+    &-left {
+        position: relative;
+        margin-top: -35px;
+    }
+    &-left img {
+        width: 725px;
+        height: 900px;
+        position: relative;
+        z-index: 2;
+    }
+    &-left:before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 65px;
+        width: 640px;
+        height: 840px;
+        background-color: #FBE0DC;
+        border-radius: 20px;
+        z-index: 1;
+    }  
+}

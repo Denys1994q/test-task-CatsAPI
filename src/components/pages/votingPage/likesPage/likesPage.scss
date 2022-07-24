@@ -1,0 +1,416 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(auto, 140px);
+    grid-column-gap: 20px;
+    grid-row-gap: 15px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.grid-item {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 140px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+.grid-item-tex {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 134, 142, 0.6);
+    opacity: 0;
+}
+
+.grid-item-tex-fav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 134, 142, 0.6);
+    opacity: 1;
+}
+
+.grid-item-tex:hover {
+    opacity: 1;
+}
+
+.grid-item-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 180px;
+    height: 34px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    color: #FF868E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid>div:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
+    overflow: hidden;
+    width: 210px;
+    height: 290px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        height: 290px;
+        object-fit: cover;
+    }
+}
+
+.grid>div:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    position: relative;
+    overflow: hidden;
+    width: 210px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 210px;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(5) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    position: relative;
+    overflow: hidden;
+    width: 420px;
+    height: 295px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 420px;
+        height: 290px;
+        object-fit: cover;
+    }
+}
+
+.grid>div:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 210px;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(7) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 210px;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(8) {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+    width: 200px;
+    height: 290px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 290px;
+        object-fit: cover;
+    }
+}
+
+.grid>div:nth-child(9) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    width: 420px;
+    height: 290px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 420px;
+        height: 290px;
+        object-fit: cover;
+    }
+}
+
+.grid>div:nth-child(10) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(11) {
+    grid-row-start: 7;
+    grid-row-end: 9;
+    position: relative;
+    overflow: hidden;
+    width: 210px;
+    height: 290px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        height: 290px;
+        object-fit: cover;
+    }
+}
+
+.grid>div:nth-child(12) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    position: relative;
+    overflow: hidden;
+    width: 210px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(13) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(14) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 8;
+    grid-row-end: 10;
+    width: 420px;
+    height: 295px;
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 420px;
+        height: 295px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        object-fit: cover;
+    }
+}
+
+.grid>div:nth-child(15) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+    position: relative;
+    overflow: hidden;
+    width: 210px;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(16) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 210px;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(17) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 210px;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 210px;
+        object-fit: contain;
+    }
+}
+
+.grid>div:nth-child(18) {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 10;
+    grid-row-end: 12;
+    width: 200px;
+    height: 290px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 290px;
+        object-fit: cover;
+    }
+}
+
+.grid>div:nth-child(19) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 11;
+    grid-row-end: 13;
+    width: 420px;
+    height: 290px;
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 420px;
+        height: 290px;
+        object-fit: cover;
+    }
+}

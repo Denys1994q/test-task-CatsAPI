@@ -1,0 +1,123 @@
+.breeds-select {
+    margin-left: 10px;
+    width: 226px;
+    height: 40px;
+    background: #F8F8F7;
+    border-radius: 10px;
+    border: none;
+    padding-left: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #8C8C8C;
+
+    &-limit {
+        width: 100px;
+        height: 40px;
+    }
+}
+
+.breeds-sort {
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+
+    a {
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &-first {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+.breeds-btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.breeds-btn {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    width: 122px;
+    height: 40px;
+    background: #F8F8F7;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: #8C8C8C;
+    text-transform: uppercase;
+    position: relative;
+
+    &-prev {
+        margin-right: 40px;
+    }
+
+    &-next-img {
+        margin-left: 10px;
+    }
+}
+
+.breeds-btn-prev::before {
+    content: url('../../../imgs/breed-prev-arrow.png');
+    position: absolute;
+    top: 13px;
+    left: 15px;
+}
+
+.breeds-btn-prev:hover {
+    background: #FBE0DC;
+    color: #FF868E;
+}
+
+.breeds-btn-prev:hover:before {
+    content: url('../../../imgs/breed-prev-arrow-hover.png');
+    position: absolute;
+    top: 13px;
+    left: 15px;
+}
+
+.breeds-btn-next::before {
+    content: url('../../../imgs/breed-next-arrow.png');
+    position: absolute;
+    top: 13px;
+    right: 15px;
+}
+
+.breeds-btn-next:hover {
+    background: #FBE0DC;
+    color: #FF868E;
+}
+
+.breeds-btn-next:hover:before {
+    content: url('../../../imgs/breed-next-arrow-hover.png');
+    position: absolute;
+    top: 13px;
+    right: 15px;
+}
+
+.breeds-btn:disabled {
+    opacity: 0.5;
+}
+
+.breeds-btn:hover:disabled {
+    background: none;
+    color: #8C8C8C;
+}
+
+.breeds-btn-prev:disabled:hover:before {
+    content: url('../../../imgs/breed-prev-arrow.png');
+}
+
+.breeds-btn-next:disabled:hover:before {
+    content: url('../../../imgs/breed-next-arrow.png');
+}

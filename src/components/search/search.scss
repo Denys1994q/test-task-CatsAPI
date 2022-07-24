@@ -1,0 +1,100 @@
+.search {
+    display: flex;
+    &-inp {
+        width: 450px;
+        height: 60px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            border: none;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            padding-left: 20px;
+        }
+        input:hover {
+            border: 2px solid #FBE0DC;
+        }
+        input:focus {
+            outline: none;
+            border: 2px solid #FF868E;
+        }
+        input::placeholder {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 30px;
+            color: #8C8C8C;
+        }
+        img {
+            position: absolute;
+            top: 15%;
+            right: 10px;
+        }
+    }
+    &-inp input:hover::placeholder {
+      opacity: 0;
+    }
+    &-icon-img {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #FBE0DC;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-icon-img::before {
+        content: url('../../imgs/search-icon.png'); 
+    }
+    &-icon-img:hover {
+        background: #FF868E;
+    }
+    &-icon-img:hover:before {
+        content: url('../../imgs/search-icon-hover.png'); 
+    }
+  
+    &-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        div:hover {
+            background-color: #f7c9cc;
+        }
+        div {
+            cursor: pointer;
+            width: 60px;
+            height: 60px;
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+    }
+    &-icon {
+        cursor: pointer;
+    }
+    &-info-breed {
+        padding-left: 20px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 29px;
+        color: #8C8C8C;
+        margin-bottom: 20px;
+    }
+}
+.search-spinner {
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+    right: 10px;
+}
