@@ -30,6 +30,7 @@ const StaticPartOfMainPage = (props) => {
     return (
         <div className="home">
             <div>1</div>
+            <div>2</div>
             <div className="home-wrapper">
                 <div className="home-right">
                     <div className="sticky">
