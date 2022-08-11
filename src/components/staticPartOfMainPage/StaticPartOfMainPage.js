@@ -35,8 +35,6 @@ const StaticPartOfMainPage = (props) => {
                     <Link to='/' className="home-right-logo">
                         <img src={logo} alt="logo" />
                     </Link>
-                    <h1>Hi intern!</h1>
-                    <h2>Welcome to MI 2022 Front-end test</h2>
                     <p>Lets start using The Cat API</p>
                     <div className="home-right-inner">
                         <div>
