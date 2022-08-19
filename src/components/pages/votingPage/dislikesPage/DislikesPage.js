@@ -54,7 +54,7 @@ const DislikesPage = () => {
 
     const sendRequestFordislikedCatsUrls = useCallback(() => {
         if (dislikedCats) {
-            const catsIds = dislikedCats.filter(item => item.value == 0).map(item => item.image_id)
+            const catsIds = dislikedCats.filter(item => item.value === 0).map(item => item.image_id)
             catsIds.map(item => {
                 request(`https://api.thecatapi.com/v1/images/${item}`,
                     'GET',
@@ -97,7 +97,7 @@ const DislikesPage = () => {
                             </div>
                             <div>
                             {loading ? <Spinner /> :
-                                    dislikedCats.filter(item => item.value == 0).length == 0 ?
+                                    dislikedCats.filter(item => item.value === 0).length === 0 ?
                                         <div className='fav-wrapper-info'>
                                             <p className='fav-wrapper-info-noItems'>No item found</p>
                                         </div>

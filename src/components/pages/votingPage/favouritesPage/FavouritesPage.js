@@ -15,7 +15,7 @@ import { SearchLengthContext } from '../../../../context/context';
 const FavouritesPage = () => {
     const { request } = useHttp();
     const [likedCats, setLikedCats] = useState([]);
-    const [deleteCat, setDeleteCat] = useState(false);
+    // const [deleteCat, setDeleteCat] = useState(false);
     const [arrDeletedCats, setArrDeletedCats] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
@@ -54,7 +54,7 @@ const FavouritesPage = () => {
     const deleteFromFavs = (id) => {
         setClicked(false);
         setArrDeletedCats(old => [...old, id])
-        setDeleteCat(id)
+        // setDeleteCat(id)
         if (likedCats.length > 0) {
             request(`https://api.thecatapi.com/v1/favourites/${id}`,
                 'DELETE',

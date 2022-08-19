@@ -53,7 +53,7 @@ const LikesPage = () => {
 
     const sendRequestForLikedCatsUrls = () => {
         if (likedCats) {
-            const catsIds = likedCats.filter(item => item.value == 1).map(item => item.image_id)
+            const catsIds = likedCats.filter(item => item.value === 1).map(item => item.image_id)
             catsIds.map(item => {
                 request(`https://api.thecatapi.com/v1/images/${item}`,
                     'GET',
@@ -77,12 +77,12 @@ const LikesPage = () => {
         )
     })
 
-    const deleteAll = () => {
-        likedCats.map(item => {
-            request(`https://api.thecatapi.com/v1/votes/${item.id}`, 'DELETE', null, { 'x-api-key': '3c71318c-32fa-4b4a-a5bf-f888e6bf7e60' })
-            .then(d => console.log(d))
-        })
-    }
+    // const deleteAll = () => {
+    //     likedCats.map(item => {
+    //         request(`https://api.thecatapi.com/v1/votes/${item.id}`, 'DELETE', null, { 'x-api-key': '3c71318c-32fa-4b4a-a5bf-f888e6bf7e60' })
+    //         .then(d => console.log(d))
+    //     })
+    // }
 
     return (
         <StaticPartOfMainPage leftPartOfPage={
@@ -103,7 +103,7 @@ const LikesPage = () => {
                             </div>
                             <div>
                                 {loading ? <Spinner /> :
-                                    likedCats.filter(item => item.value == 1).length == 0 ?
+                                    likedCats.filter(item => item.value === 1).length === 0 ?
                                         <div className='fav-wrapper-info'>
                                             <p className='fav-wrapper-info-noItems'>No item found</p>
                                         </div>

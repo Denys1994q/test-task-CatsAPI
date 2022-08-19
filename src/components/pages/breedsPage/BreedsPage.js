@@ -56,14 +56,14 @@ const BreedsPage = () => {
 
     const sendRequestForCats = () => {
         setSorted(false)
-        if (selectedBreed == 'all breeds') {
+        if (selectedBreed === 'all breeds') {
             setLoading(false);
             request(`https://api.thecatapi.com/v1/breeds?limit=${limit}&page=${page}`)
                 .then(setBreedsImgs)
                 .catch(onError)
         }
         else {
-            const selectedBreedId = breeds.filter(item => item.name == selectedBreed);
+            const selectedBreedId = breeds.filter(item => item.name === selectedBreed);
             setLoading(false);
             request(`https://api.thecatapi.com/v1/images/search?breed_ids=${selectedBreedId[0].id}&limit=${limit}&page=${page}&order=Desc`, 'GET', null, { 'x-api-key': '3c71318c-32fa-4b4a-a5bf-f888e6bf7e60' })
                 .then(setBreedsImgs)
@@ -199,7 +199,7 @@ const BreedsPage = () => {
                             <button
                                 onClick={showPrevPage}
                                 className="breeds-btn breeds-btn-prev"
-                                disabled={page == 0 ? true : false} >
+                                disabled={page === 0 ? true : false} >
                                 Prev
                             </button>
                             <button

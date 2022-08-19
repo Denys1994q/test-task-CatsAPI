@@ -52,7 +52,7 @@ const Search = () => {
 
     const searchCat = (e) => {
         setSearchInput(e.target.value)
-        if (e.target.value == 0) {
+        if (e.target.value === 0) {
             setSearchBtnClicked(false);
             setCats([])
             setBreedId('')

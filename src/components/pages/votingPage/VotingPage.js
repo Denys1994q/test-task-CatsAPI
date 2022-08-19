@@ -24,7 +24,7 @@ const VotingPage = () => {
     const [error, setError] = useState(false);
     const [favCat, setFavCat] = useState(false);
     const [favCats, setFavCats] = useState([]);
-    const [catDeleted, setCatDeleted] = useState(false);
+    // const [catDeleted, setCatDeleted] = useState(false);
     // контекст
     const { searchInput, setSearchInput } = useContext(SearchLengthContext);
     const { searchBtnClicked, setSearchBtnClicked } = useContext(InputContext);
@@ -109,7 +109,7 @@ const VotingPage = () => {
     const addToFavourites = (e) => {
         e.preventDefault();
 
-        if (!favCats.filter(item => item.image_id == cat[0].id).length > 0) {    
+        if (!favCats.filter(item => item.image_id === cat[0].id).length > 0) {    
             setFavCat(true);
             setSelectedCat(old => [...old, {
                 image_id: cat[0].id,
@@ -136,8 +136,8 @@ const VotingPage = () => {
                 status: 'removeFromFavourite'
             }])
 
-            setCatDeleted(true);
-            const deleted = favCats.filter(it => it.image_id == selectedCat[0].image_id);
+            // setCatDeleted(true);
+            const deleted = favCats.filter(it => it.image_id === selectedCat[0].image_id);
             request(`https://api.thecatapi.com/v1/favourites/${deleted[0].id}`,
                 'DELETE',
                 null,
@@ -172,7 +172,7 @@ const VotingPage = () => {
                 <div className="info-time">
                     <p>{hours}</p>
                 </div>
-                {item.status == 'removeFromFavourite' ? 
+                {item.status === 'removeFromFavourite' ? 
                     <p className="info-text">Image ID: <span>{item.image_id}</span> was removed from favourite </p>
                 : 
                     <p className="info-text">Image ID: <span>{item.image_id}</span> was added to {item.status} </p>

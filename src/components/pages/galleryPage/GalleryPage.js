@@ -1,6 +1,5 @@
 // стилі і картинки
 import VotingArrow from '../../../imgs/voting-arrow.svg';
-import GalleryFav from '../../../imgs/gallery-fav.png';
 import CloseLogo from '../../../imgs/gallery-btn-close.png';
 import './galleryPage.scss';
 // компоненти
@@ -73,7 +72,7 @@ const GalleryPage = () => {
 
     const getCatsfromApi = () => {
         setLoadingGalleryImgs(false);
-        if (breed == '' || breed == 'none') {
+        if (breed === '' || breed === 'none') {
             request(`https://api.thecatapi.com/v1/images/search?limit=${limit}&order=${order}&mime_types=${type}`, 'GET', null, { 'x-api-key': '3c71318c-32fa-4b4a-a5bf-f888e6bf7e60' })
                 .then(setCatImgs)
         }
@@ -92,7 +91,7 @@ const GalleryPage = () => {
 
     const addToFavourites = (item) => {
         // якщо клікнули на картинку, якої немає в списку улюблених - додаємо її до списку улюблених
-        if (!stylizedFavCats.filter(it => it.image_id == item.id).length > 0) {
+        if (!stylizedFavCats.filter(it => it.image_id === item.id).length > 0) {
             const body = {
                 image_id: item.id,
             }
@@ -107,7 +106,7 @@ const GalleryPage = () => {
         }
         // якщо клікнули на картинку, яка є списку улюблених - видаляємо 
         else {
-            const deleted = stylizedFavCats.filter(it => it.image_id == item.id)
+            const deleted = stylizedFavCats.filter(it => it.image_id === item.id)
             request(`https://api.thecatapi.com/v1/favourites/${deleted[0].id}`,
                 'DELETE',
                 null,
@@ -125,10 +124,10 @@ const GalleryPage = () => {
             <div key={item.id} className="grid-item">
                 <img className="grid-item-img" src={item.url} alt="" />
                 <div
-                    className={stylizedFavCats.filter(it => it.image_id == id).length > 0 ? 'grid-item-tex-fav' : 'grid-item-tex'} >
+                    className={stylizedFavCats.filter(it => it.image_id === id).length > 0 ? 'grid-item-tex-fav' : 'grid-item-tex'} >
                     <div
                         onClick={() => addToFavourites(item)}
-                        className={stylizedFavCats.filter(it => it.image_id == id).length > 0 ? "grid-item-fav-active" : "grid-item-fav"}>
+                        className={stylizedFavCats.filter(it => it.image_id === id).length > 0 ? "grid-item-fav-active" : "grid-item-fav"}>
                     </div>
                 </div>
             </div>
